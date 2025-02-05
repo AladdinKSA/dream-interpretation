@@ -20,7 +20,7 @@ async function interpretDream() {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
-                "Authorization": `Bearer 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`
+                "Authorization": `Bearer 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`
             },
             body: JSON.stringify({
                 model: "gpt-4",
