@@ -21,6 +21,7 @@ if (!process.env.OPENAI_API_KEY) {
 const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY
 });
+console.log("🔑 مفتاح API:", process.env.OPENAI_API_KEY);
 
 // نقطة النهاية لاستقبال الأحلام من المستخدم وإرسالها إلى OpenAI
 app.post("/interpret-dream", async (req, res) => {
