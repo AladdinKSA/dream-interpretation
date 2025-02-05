@@ -43,3 +43,5 @@ const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY // تأكد أن المفتاح يتم تحميله بشكل صحيح
 });
 
+console.log("🔑 مفتاح API:", process.env.OPENAI_API_KEY);
+
