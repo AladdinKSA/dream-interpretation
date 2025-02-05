@@ -20,3 +20,6 @@ document.getElementById("interpret-btn").addEventListener("click", async () => {
         document.getElementById("result").innerText = "خطأ في الاتصال بالخادم!";
     }
 });
+
+console.log("🔑 مفتاح API:", process.env.OPENAI_API_KEY);
+
