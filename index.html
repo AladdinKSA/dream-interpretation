@@ -3,17 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>علاء الدين لتفسير الأحلام</title>
+    <title>علاء الدين لتفسير الاحلام</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h2>علاء الدين لتفسير الأحلام</h2>
-        <p>اكتب حلمك وسنقوم بتفسيره لك باستخدام الذكاء الاصطناعي</p>
-        <textarea id="dreamInput" placeholder="اكتب حلمك هنا..."></textarea>
-        <button onclick="interpretDream()">تفسير الحلم</button>
-        <p id="result"></p>
-    </div>
-    <script src="script.js"></script>
+
+<div class="container">
+    <h1>علاء الدين لتفسير الاحلام</h1>
+    <p>اكتب حلمك في الحقل أدناه للحصول على تفسير.</p>
+
+    <!-- حقل إدخال الحلم -->
+    <textarea id="dreamInput" placeholder="اكتب حلمك هنا..."></textarea>
+
+    <!-- زر لتفسير الحلم -->
+    <button onclick="interpretDream()">تفسير الحلم</button>
+
+    <!-- مكان عرض النتيجة أو الخطأ -->
+    <div id="message"></div>
+
+    <!-- محاكي التحميل -->
+    <div id="loader" class="loader" style="display:none;"></div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
