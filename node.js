@@ -1,29 +1,26 @@
-import dotenv from 'dotenv';
 import { OpenAI } from 'openai';
+import dotenv from 'dotenv';
 
-// قم بتحميل البيئة من ملف .env
-dotenv.config();
+dotenv.config(); // تحميل البيئة من ملف .env
 
-// تهيئة مكتبة OpenAI باستخدام API Key
+// تهيئة مكتبة OpenAI باستخدام مفتاح API
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY
+  apiKey: process.env.OPENAI_API_KEY,
 });
 
-// دالة لتفسير الحلم
-async function interpretDream(dream) {
+// دالة تفسير الحلم
+export async function interpretDream(dream) {
   try {
+    // الاتصال بـ OpenAI API للحصول على تفسير الحلم
     const completion = await openai.chat.completions.create({
-      model: "gpt-4",
-      messages: [
-        { role: "user", content: `فسر لي هذا الحلم: ${dream}` }
-      ]
+      model: 'gpt-4', // يمكنك استخدام gpt-3.5 أو أي موديل آخر حسب الحاجة
+      messages: [{ role: 'user', content: `فسر لي هذا الحلم: ${dream}` }],
     });
-    
-    console.log(completion.choices[0].message.content);
+
+    // إرجاع التفسير الذي توفره OpenAI
+    return completion.choices[0].message.content;
   } catch (error) {
-    console.error("حدث خطأ أثناء الاتصال بـ OpenAI:", error);
+    console.error('حدث خطأ أثناء الاتصال بـ OpenAI:', error);
+    throw error; // إلقاء الخطأ إذا فشل الاتصال
   }
 }
-
-// مثال لاستخدام الدالة مع حلم معين
-interpretDream("أنا حلمت بأنني أسبح في البحر أمام شاطئ هادئ.");
