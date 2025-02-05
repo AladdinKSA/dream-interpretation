@@ -34,3 +34,12 @@ app.post("/interpret-dream", async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`🚀 الخادم يعمل على المنفذ ${PORT}`));
+
+import OpenAI from "openai";
+import dotenv from "dotenv";
+dotenv.config(); // تحميل متغيرات البيئة
+
+const openai = new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY // تأكد أن المفتاح يتم تحميله بشكل صحيح
+});
+
