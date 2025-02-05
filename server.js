@@ -45,3 +45,14 @@ const openai = new OpenAI({
 
 console.log("🔑 مفتاح API:", process.env.OPENAI_API_KEY);
 
+import OpenAI from "openai";
+import dotenv from "dotenv";
+dotenv.config(); // تحميل متغيرات البيئة
+
+const openai = new OpenAI({
+    apiKey: process.env.OPENAI_API_KEY // تحميل مفتاح API من ملف البيئة
+});
+
+console.log("🔑 مفتاح API الذي يتم تحميله:", process.env.OPENAI_API_KEY); // للتحقق
+
+
