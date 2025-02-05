@@ -21,5 +21,5 @@ document.getElementById("interpret-btn").addEventListener("click", async () => {
     }
 });
 
-console.log("🔑 مفتاح API:", process.env.OPENAI_API_KEY);
+
 
