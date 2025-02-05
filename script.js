@@ -12,7 +12,7 @@ async function interpretDream() {
 
 
 
-    let apiKey = "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"; // ضع مفتاح API هنا
+    let apiKey = "sk-proj-qAPZbjzZujkpnCfmujPHICLrqjsk-proj-JPJGWA7g6xLJK492tvvj-igsQKvqK9kjY3sapUcyTCS9X0Efus0uCkMNc-V30DA3DLfudXbrlmT3BlbkFJJg2ja72Kx62hB_ozTzR_7ccZ8S_PUHo1-LMLuVKRmR17RF13XoBlSHUDMkdbHHq6Hl4BTE5qYA"; // ضع مفتاح API هنا
 
     let response = await fetch("https://api.openai.com/v1/chat/completions", {
 
