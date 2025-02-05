@@ -8,7 +8,7 @@ document.getElementById('interpretBtn').addEventListener('click', async function
     const resultDiv = document.getElementById('result');
     resultDiv.innerHTML = '<p>جاري تفسير الحلم...</p>';
 
-    const apiKey = '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';  // ضع هنا الـ API Key الخاص بك من OpenAI
+    const apiKey = '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';  // ضع هنا الـ API Key الخاص بك من OpenAI
     const url = 'https://api.openai.com/v1/completions';
 
     const requestBody = {
