@@ -1,0 +1,68 @@
+/* تعيين هوامش وإعدادات عامة للجسم */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    background-color: #000000; /* خلفية سوداء */
+    color: #FFD700; /* نص باللون الذهبي */
+}
+
+/* تنسيق رأس الصفحة */
+header {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* تنسيق الشعار */
+.logo {
+    max-width: 20%;
+    height: auto;
+}
+
+/* تنسيق المحتوى الرئيسي */
+main {
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* تنسيق العنوان */
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* تنسيق حقل إدخال الحلم */
+#dreamInput {
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    background-color: #333333; /* خلفية داكنة لحقل الإدخال */
+    color: #FFD700; /* نص باللون الذهبي */
+}
+
+/* تنسيق زر التفسير */
+#interpretButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #FFFFFF; /* زر باللون الأبيض */
+    color: #000000; /* نص باللون الأسود */
+    cursor: pointer;
+}
+
+#interpretButton:hover {
+    background-color: #f0f0f0; /* تأثير عند التمرير على الزر */
+}
