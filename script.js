@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
       interpretationDiv.style.display = 'block';
 
       try {
-        const response = await fetch('https://api.aimlapi.com/chat/completions', {
+        const response = await fetch('https://api.aimlapi.com/v1', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
