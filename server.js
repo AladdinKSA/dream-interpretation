@@ -28,7 +28,7 @@ app.post('/interpret', async (req, res) => {
   }
 
   try {
-    const response = await openai.chat.completions.create({
+    const completion = await openai.chat.completions.create({
       model: 'mistralai/Mistral-7B-Instruct-v0.2',
       messages: [
         { role: 'system', content: 'أنت مفسر أحلام. كن وصفيًا ومساعدًا.' },
@@ -37,8 +37,10 @@ app.post('/interpret', async (req, res) => {
       temperature: 0.7,
       max_tokens: 256,
     });
-
-    const interpretation = response.choices[0].message.content.trim();
+ const response = completion.choices[0].message.content;
+      console.log("الحلم:", dream);
+console.log("التفسير :", response);
+    const interpretation = completion.choices[0].message.content.trim();
     res.json({ interpretation });
   } catch (error) {
     console.error('حدث خطأ:', error);
