@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
-  baseURL: 'https://api.aimlapi.com/v1',
+  baseURL: 'https://api.aimlapi.com',
 });
 
 app.post('/interpret', async (req, res) => {
