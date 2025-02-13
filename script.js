@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
       interpretationDiv.style.display = 'block';
 
       try {
-        const response = await fetch('https://api.aimlapi.com/v1', {
+        const response = await fetch('https://api.openai.com/v1/chat/completions', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
