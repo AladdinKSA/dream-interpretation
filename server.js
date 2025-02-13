@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
-  baseURL: 'https://api.aimlapi.com/v1',
+  baseURL: 'https://api.aimlapi.com/v1/chat/completions',
 });
 
 app.post('/interpret', async (req, res) => {
@@ -29,7 +29,7 @@ app.post('/interpret', async (req, res) => {
 
   try {
     const completion = await openai.chat.completions.create({
-      model: 'mistralai/Mistral-7B-Instruct-v0.2',
+      model: 'gpt-4o',
       messages: [
         { role: 'system', content: 'أنت مفسر أحلام. كن وصفيًا ومساعدًا.' },
         { role: 'user', content: dream },
