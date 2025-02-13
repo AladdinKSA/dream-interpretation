@@ -19,8 +19,8 @@ app.get('/', (req, res) => {
 import os
 from openai import OpenAI
 
-client = OpenAI (api Key: "36c33ba0789448d89ee6fbb9bc7ac280",
-  baseURL: "https://api.aimlapi.com/v1")
+client = OpenAI (api Key: "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",
+  baseURL: "https://api.openai.com/v1/chat/completions")
 
 app.post('/interpret', async (req, res) => {
   const { dream } = req.body;
