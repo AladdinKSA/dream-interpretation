@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    direction: rtl;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,7 +22,7 @@ header {
 
 /* تنسيق الشعار */
 .logo {
-    max-width: 20%;
+    max-width: 15%;
     height: auto;
 }
 
@@ -45,12 +46,15 @@ h1 {
     height: 150px;
     padding: 10px;
     margin-bottom: 10px;
+    font-size: 14px;
     border: 1px solid #ccc;
     border-radius: 5px;
     resize: none;
     background-color: #333333; /* خلفية داكنة لحقل الإدخال */
     color: #FFD700; /* نص باللون الذهبي */
 }
+
+  
 
 /* تنسيق زر التفسير */
 #interpretButton {
@@ -66,3 +70,17 @@ h1 {
 #interpretButton:hover {
     background-color: #f0f0f0; /* تأثير عند التمرير على الزر */
 }
+
+.interpretation-box {
+    border: 2px solid gold;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+}
+  
+  
+  
