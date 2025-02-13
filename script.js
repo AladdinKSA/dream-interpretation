@@ -4,7 +4,7 @@ document.getElementById('dreamForm').addEventListener('submit', async function(e
     const dreamText = document.getElementById('dreamInput').value;
   
     try {
-      const response = await fetch('https://api.aimlapi.com', {
+      const response = await fetch('https://api.aimlapi.com/v1', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
