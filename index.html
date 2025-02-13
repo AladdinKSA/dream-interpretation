@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="ar">
+    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>خدمة علاء الدين لتفسير الاحلام</title>
+    <title>خدمة علاء الدين لتفسير الأحلام</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -12,8 +14,12 @@
     </header>
     <main>
         <h1>أدخل حلمك لتفسيره</h1>
-        <textarea id="dreamInput" placeholder="اكتب حلمك هنا..."></textarea>
-        <button id="interpretButton">تفسير الحلم</button>
+        <form id="dreamForm">
+            <textarea id="dreamInput" placeholder="اكتب حلمك هنا..."></textarea>
+            <button type="submit">اضغط لتفسير الحلم</button>
+        </form>
+        </div><div id="interpretation" class="interpretation-box" style="display: none;"></div>
+        <p id="interpretationResult"></p>
     </main>
     <script src="script.js"></script>
 </body>
