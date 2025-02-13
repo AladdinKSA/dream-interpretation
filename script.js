@@ -4,7 +4,7 @@ document.getElementById('dreamForm').addEventListener('submit', async function(e
     const dreamText = document.getElementById('dreamInput').value;
   
     try {
-      const response = await fetch('https://api.aimlapi.com/v1', {
+      const response = await fetch('https://api.aimlapi.com/chat/completions', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
