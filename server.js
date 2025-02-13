@@ -31,7 +31,7 @@ app.post('/interpret', async (req, res) => {
     const response = await openai.chat.completions.create({
       model: 'mistralai/Mistral-7B-Instruct-v0.2',
       messages: [
-        { role: 'system', content: 'أنت مترجم أحلام. كن وصفيًا ومساعدًا.' },
+        { role: 'system', content: 'أنت مفسر أحلام. كن وصفيًا ومساعدًا.' },
         { role: 'user', content: dream },
       ],
       temperature: 0.7,
