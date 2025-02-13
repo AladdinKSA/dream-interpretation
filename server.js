@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
 
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
-  baseURL: 'https://api.aimlapi.com',
+  baseURL: 'https://api.aimlapi.com/v1',
 });
 
 app.post('/interpret', async (req, res) => {
@@ -45,7 +45,10 @@ app.post('/interpret', async (req, res) => {
     res.status(500).json({ error: 'حدث خطأ أثناء تفسير الحلم.' });
   }
 });
-
+const api = new OpenAI({
+  apiKey,
+  baseURL,
+});
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`الخادم يعمل على http://localhost:${PORT}`);
