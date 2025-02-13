@@ -23,7 +23,7 @@ header {
 /* تنسيق الشعار */
 .logo {
     max-width: 20%;
-    height: 20%;
+    height: auto;
 }
 
 /* تنسيق المحتوى الرئيسي */
