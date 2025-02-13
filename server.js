@@ -15,10 +15,12 @@ app.get('/', (req, res) => {
 });
 
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-  baseURL: 'https://api.aimlapi.com/v1',
-});
+%pip install openai
+import os
+from openai import OpenAI
+
+client = OpenAI (api Key: "36c33ba0789448d89ee6fbb9bc7ac280",
+  baseURL: "https://api.aimlapi.com/v1")
 
 app.post('/interpret', async (req, res) => {
   const { dream } = req.body;
