@@ -2,6 +2,8 @@ document.getElementById('dreamForm').addEventListener('submit', async function(e
     event.preventDefault();
   
     const dreamText = document.getElementById('dreamInput').value;
+    const apiKey = import.meta.env.VITE_OPENAI_API_KEY;
+
 
 
   // إظهار مؤشر التحميل
@@ -12,7 +14,7 @@ document.getElementById('dreamForm').addEventListener('submit', async function(e
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-            'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
+    'Authorization': `Bearer ${apiKey}`,
         },
         body: JSON.stringify({ dream: dreamText }),
       });
