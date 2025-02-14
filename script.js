@@ -8,7 +8,7 @@ document.getElementById('dreamForm').addEventListener('submit', async function(e
   loadingIndicator.style.display = 'block';
   
     try {
-      const response = await fetch('https://api.openai.com/v1/chat/completions', {
+      const response = await fetch('https://api.openai.com/v1', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
