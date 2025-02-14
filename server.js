@@ -1,8 +1,20 @@
 require('dotenv').config();
 const express = require('express');
 const { OpenAI } = require('openai');
+const cors = require('cors');
 
 const app = express();
+
+const corsOptions = {
+  origin: 'https://aladdinksa.github.io',
+  methods: 'GET,POST',
+  allowedHeaders: 'Content-Type',
+};
+
+app.use(cors(corsOptions));
+
+
+
 app.use(express.json());
 const path = require('path');
 
