@@ -15,12 +15,11 @@ app.get('/', (req, res) => {
 });
 
 
-%pip install openai
-import os
-from openai import OpenAI
-
-client = OpenAI (api Key: "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",
-  baseURL: "https://api.openai.com/v1/chat/completions")
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY,
+ // baseURL: 'https://api.aimlapi.com/v1',
+  baseURL: 'https://api.openai.com/v1',
+});
 
 app.post('/interpret', async (req, res) => {
   const { dream } = req.body;
@@ -30,29 +29,26 @@ app.post('/interpret', async (req, res) => {
   }
 
   try {
-    const completion = await openai.chat.completions.create({
-      model: 'gpt-4o',
+    const response = await openai.chat.completions.create({
+     // model: 'mistralai/Mistral-7B-Instruct-v0.2',
+      model: 'gpt-4o-mini',
+
       messages: [
-        { role: 'system', content: 'أنت مفسر أحلام. كن وصفيًا ومساعدًا.' },
+        { role: 'system', content: 'أنت مفسر أحلام. قم بتفسير هذا الحلم حسب تفسير ابن سيرين .' },
         { role: 'user', content: dream },
       ],
       temperature: 0.7,
       max_tokens: 256,
     });
- const response = completion.choices[0].message.content;
-      console.log("الحلم:", dream);
-console.log("التفسير :", response);
-    const interpretation = completion.choices[0].message.content.trim();
+
+    const interpretation = response.choices[0].message.content.trim();
     res.json({ interpretation });
   } catch (error) {
     console.error('حدث خطأ:', error);
     res.status(500).json({ error: 'حدث خطأ أثناء تفسير الحلم.' });
   }
 });
-const api = new OpenAI({
-  apiKey,
-  baseURL,
-});
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`الخادم يعمل على http://localhost:${PORT}`);
