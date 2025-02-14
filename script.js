@@ -32,6 +32,7 @@ document.getElementById('dreamForm').addEventListener('submit', async function(e
       //document.getElementById('interpretation').textContent = 'حدث خطأ أثناء تفسير الحلم.';
       const interpretationDiv = document.getElementById('interpretation');
     interpretationDiv.textContent = 'حدث خطأ أثناء تفسير الحلم.';
+    loadingIndicator.style.display = 'none';
     interpretationDiv.style.display = 'block';
     }
     /*finally {
