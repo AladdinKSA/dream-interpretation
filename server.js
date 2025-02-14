@@ -38,7 +38,7 @@ app.post('/api/interpret', async (req, res) => {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer YOUR_API_KEY', // استبدل YOUR_API_KEY بمفتاح API الخاص بك
+      'Authorization': 'Bearer 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', // استبدل YOUR_API_KEY بمفتاح API الخاص بك
     },
     body: JSON.stringify(req.body),
   });
