@@ -2,6 +2,7 @@ document.getElementById('dreamForm').addEventListener('submit', async function(e
     event.preventDefault();
   const express = require('express');
 const { OpenAI } = require('openai');
+    const fetch = require('node-fetch');
 const cors = require('cors');
 
 const app = express();
