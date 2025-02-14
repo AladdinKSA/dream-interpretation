@@ -1,14 +1,20 @@
 document.getElementById('dreamForm').addEventListener('submit', async function(event) {
     event.preventDefault();
-  
-    const dreamText = document.getElementById('dreamInput').value;
-/*const cors = require('cors');*/
+  const express = require('express');
+const { OpenAI } = require('openai');
+const cors = require('cors');
+
+const app = express();
 
 const corsOptions = {
   origin: 'https://aladdinksa.github.io',
   methods: 'GET,POST',
   allowedHeaders: 'Content-Type',
 };
+
+app.use(cors(corsOptions));
+
+    const dreamText = document.getElementById('dreamInput').value;
 
   // إظهار مؤشر التحميل
   loadingIndicator.style.display = 'block';
