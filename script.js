@@ -2,7 +2,6 @@ document.getElementById('dreamForm').addEventListener('submit', async function(e
     event.preventDefault();
   
     const dreamText = document.getElementById('dreamInput').value;
-/*const apiKey = import.meta.env.VITE_OPENAI_API_KEY;*/
 const apiKey = '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';
 
 
@@ -17,13 +16,7 @@ const apiKey = 'sk-proj-rcoyoCd22S05PEKlZvnKX0zKvORfhp6hzZ1yd95p6j7EZCuPvv8Z4Hgy
     'Authorization': `Bearer ${apiKey}`,
         },
        body: JSON.stringify({ dream: dreamText }),
-       /* body: JSON.stringify({  model: 'gpt-4o-mini',
-    messages: [
-      { role: 'system', content: 'قم بتفسير هذا الحلم حسب تفسيرات ابن سيرين' },
-      { role: 'user', content: dreamText },
-    ],
-    temperature: 0.7,
-    max_tokens: 256,}),*/
+       
       });
   
       if (!response.ok) {
