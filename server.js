@@ -33,6 +33,27 @@ const openai = new OpenAI({
   baseURL: 'https://api.openai.com/v1',
 });
 
+app.post('/api/interpret', async (req, res) => {
+  const response = await fetch('https://api.openai.com/v1/chat/completions', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer YOUR_API_KEY', // استبدل YOUR_API_KEY بمفتاح API الخاص بك
+    },
+    body: JSON.stringify(req.body),
+  });
+
+  const data = await response.json();
+  res.json(data);
+});
+
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}`);
+});
+
+
+
+/*
 app.post('/interpret', async (req, res) => {
   const { dream } = req.body;
 
@@ -64,4 +85,4 @@ app.post('/interpret', async (req, res) => {
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`الخادم يعمل على http://localhost:${PORT}`);
-});
+});*/
