@@ -16,14 +16,14 @@ const apiKey = 'sk-proj-rcoyoCd22S05PEKlZvnKX0zKvORfhp6hzZ1yd95p6j7EZCuPvv8Z4Hgy
           'Content-Type': 'application/json',
     'Authorization': `Bearer ${apiKey}`,
         },
-     /*   body: JSON.stringify({ dream: dreamText }),*/
-        body: JSON.stringify({  model: 'gpt-4o-mini',
+       body: JSON.stringify({ dream: dreamText }),
+       /* body: JSON.stringify({  model: 'gpt-4o-mini',
     messages: [
       { role: 'system', content: 'قم بتفسير هذا الحلم حسب تفسيرات ابن سيرين' },
       { role: 'user', content: dreamText },
     ],
     temperature: 0.7,
-    max_tokens: 256,}),
+    max_tokens: 256,}),*/
       });
   
       if (!response.ok) {
