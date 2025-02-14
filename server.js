@@ -39,7 +39,7 @@ app.post('/api/interpret', async (req, res) => {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer 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', // استبدل YOUR_API_KEY بمفتاح API الخاص بك
+      'Authorization': 'Bearer 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', // استبدل YOUR_API_KEY بمفتاح API الخاص بك
     },
     body: JSON.stringify(req.body),
   });
