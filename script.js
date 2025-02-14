@@ -2,7 +2,13 @@ document.getElementById('dreamForm').addEventListener('submit', async function(e
     event.preventDefault();
   
     const dreamText = document.getElementById('dreamInput').value;
+const cors = require('cors');
 
+const corsOptions = {
+  origin: 'https://aladdinksa.github.io',
+  methods: 'GET,POST',
+  allowedHeaders: 'Content-Type',
+};
 
   // إظهار مؤشر التحميل
   loadingIndicator.style.display = 'block';
