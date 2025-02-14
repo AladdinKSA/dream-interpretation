@@ -3,7 +3,7 @@ document.getElementById('dreamForm').addEventListener('submit', async function(e
   
     const dreamText = document.getElementById('dreamInput').value;
 /*const apiKey = import.meta.env.VITE_OPENAI_API_KEY;*/
-const apiKey = 'your_api_key_here';
+const apiKey = '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';
 
 
   // إظهار مؤشر التحميل
