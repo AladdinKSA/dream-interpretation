@@ -14,7 +14,7 @@ const corsOptions = {
   loadingIndicator.style.display = 'block';
   
     try {
-    /*  const response = await fetch('https://api.openai.com/v1/chat/completions', {*/
+   
           const response = await fetch('https://api.openai.com/v1', {
         method: 'POST',
         headers: {
