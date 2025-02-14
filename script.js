@@ -14,7 +14,13 @@ document.getElementById('dreamForm').addEventListener('submit', async function(e
           'Content-Type': 'application/json',
     'Authorization': `Bearer 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`,
         },
-       body: JSON.stringify({ dream: dreamText }),
+       body: JSON.stringify({  model: 'gpt-4o-mini', // أو أي نموذج آخر ترغب في استخدامه
+    messages: [
+      { role: 'system', content: 'أنت مفسر احلام فضلا قم بتفسير هذا الحلم حسب تفسيرات ابن سيرين.' },
+      { role: 'user', content: dreamText },
+    ],
+    temperature: 0.7,
+    max_tokens: 256, }),
        
       });
   
