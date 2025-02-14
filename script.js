@@ -2,7 +2,7 @@ document.getElementById('dreamForm').addEventListener('submit', async function(e
     event.preventDefault();
   
     const dreamText = document.getElementById('dreamInput').value;
-const cors = require('cors');
+/*const cors = require('cors');*/
 
 const corsOptions = {
   origin: 'https://aladdinksa.github.io',
