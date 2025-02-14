@@ -2,7 +2,8 @@ document.getElementById('dreamForm').addEventListener('submit', async function(e
     event.preventDefault();
   
     const dreamText = document.getElementById('dreamInput').value;
-const apiKey = import.meta.env.VITE_OPENAI_API_KEY;
+/*const apiKey = import.meta.env.VITE_OPENAI_API_KEY;*/
+const apiKey = 'your_api_key_here';
 
 
   // إظهار مؤشر التحميل
