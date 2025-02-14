@@ -2,7 +2,6 @@ document.getElementById('dreamForm').addEventListener('submit', async function(e
     event.preventDefault();
   
     const dreamText = document.getElementById('dreamInput').value;
-const apiKey = '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';
 
 
   // إظهار مؤشر التحميل
@@ -13,7 +12,7 @@ const apiKey = 'sk-proj-rcoyoCd22S05PEKlZvnKX0zKvORfhp6hzZ1yd95p6j7EZCuPvv8Z4Hgy
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-    'Authorization': `Bearer ${apiKey}`,
+    'Authorization': `Bearer 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`,
         },
        body: JSON.stringify({ dream: dreamText }),
        
