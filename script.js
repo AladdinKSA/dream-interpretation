@@ -2,8 +2,7 @@ document.getElementById('dreamForm').addEventListener('submit', async function(e
     event.preventDefault();
   
     const dreamText = document.getElementById('dreamInput').value;
-    const apiKey = import.meta.env.VITE_OPENAI_API_KEY;
-
+const apiKey = import.meta.env.VITE_OPENAI_API_KEY;
 
 
   // إظهار مؤشر التحميل
@@ -16,7 +15,14 @@ document.getElementById('dreamForm').addEventListener('submit', async function(e
           'Content-Type': 'application/json',
     'Authorization': `Bearer ${apiKey}`,
         },
-        body: JSON.stringify({ dream: dreamText }),
+     /*   body: JSON.stringify({ dream: dreamText }),*/
+        body: JSON.stringify({  model: 'gpt-4o-mini',
+    messages: [
+      { role: 'system', content: 'قم بتفسير هذا الحلم حسب تفسيرات ابن سيرين' },
+      { role: 'user', content: dreamText },
+    ],
+    temperature: 0.7,
+    max_tokens: 256,}),
       });
   
       if (!response.ok) {
